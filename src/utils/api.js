@@ -1,7 +1,7 @@
 import { useUserStore } from '@/store/user.js'
 
 // API基础URL
-const BASE_URL = 'http://localhost:3001' // 可以根据实际环境配置
+const BASE_URL = 'http://115.120.220.164:3001' // 可以根据实际环境配置
 
 /**
  * 通用请求方法

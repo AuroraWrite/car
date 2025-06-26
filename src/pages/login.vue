@@ -29,7 +29,7 @@ const onLogin = async () => {
   uni.showLoading({ title: "登录中..." });
   try {
     const res = await request({
-      url: "http://localhost:3001/login",
+      url: "http://115.120.220.164:3001/login",
       method: "POST",
       data: {
         username: form.value.username,

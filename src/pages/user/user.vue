@@ -159,6 +159,7 @@ function goToPerformancePage() {
   background: #2d466b;
   color: #fff;
   font-size: 32rpx;
+  line-height: 88rpx;
   border-radius: 8rpx;
   border: none;
 }
