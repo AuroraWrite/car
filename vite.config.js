@@ -3,6 +3,7 @@ import uni from '@dcloudio/vite-plugin-uni'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { VantResolver } from '@vant/auto-import-resolver'
+import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -14,4 +15,7 @@ export default defineConfig({
       resolvers: [VantResolver()],
     }),
   ],
+  alias: {
+    '@': path.resolve(__dirname, './src'),
+  },
 })

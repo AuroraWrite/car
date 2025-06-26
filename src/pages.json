@@ -1,15 +1,58 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor": "#2d466b",
+				"navigationBarTextStyle": "white"
 			}
 		},
 		{
 			"path": "pages/login",
 			"style": {
 				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/task/task",
+			"style": {
+				"navigationBarTitleText": "我的任务",
+				"navigationBarBackgroundColor": "#2d466b",
+				"navigationBarTextStyle": "white",
+				"onReachBottomDistance": 50
+			}
+		},
+		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "关于我",
+				"navigationBarBackgroundColor": "#2d466b",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/task/detail",
+			"style": {
+				"navigationBarTitleText": "任务详情",
+				"navigationBarBackgroundColor": "#2d466b",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/user/password",
+			"style": {
+				"navigationBarTitleText": "修改密码",
+				"navigationBarBackgroundColor": "#2d466b",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/performance/performance",
+			"style": {
+				"navigationBarTitleText": "我的绩效",
+				"navigationBarBackgroundColor": "#2d466b",
+				"navigationBarTextStyle": "white"
 			}
 		}
 	],
