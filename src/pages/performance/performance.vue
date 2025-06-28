@@ -494,9 +494,7 @@ defineExpose({
           </view>
           <view class="route-point company">
             <text class="point-label">社</text>
-            <text class="point-value">{{
-              task.travelagency || task.route
-            }}</text>
+            <text class="point-value">{{ task.travelagency }}</text>
           </view>
         </view>
       </view>

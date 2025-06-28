@@ -969,7 +969,7 @@ async function setTaskCompleted(taskId) {
             </view>
             <view class="route-info">
               <van-icon name="location" size="16" color="#999" />
-              <text>{{ task.route }}</text>
+              <text>{{ task.travelagency }}</text>
             </view>
           </view>
 
