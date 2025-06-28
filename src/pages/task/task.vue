@@ -1166,7 +1166,7 @@ async function setTaskCompleted(taskId) {
   width: 100%;
   position: fixed;
   top: 0;
-  padding: 98rpx 0 28rpx;
+  padding: 138rpx 0 28rpx;
   width: 100%;
   z-index: 13;
   background-color: #fff;
@@ -1181,10 +1181,9 @@ async function setTaskCompleted(taskId) {
 
 .search-box {
   /* 移除margin-top，改用padding-top */
-  margin-top: 0;
-  padding-top: 20rpx;
+  margin-top: -10rpx;
   display: flex;
-  padding: 20rpx 24rpx 24rpx;
+  padding: 80rpx 24rpx 24rpx;
   background-color: white;
 }
 
@@ -1584,6 +1583,10 @@ async function setTaskCompleted(taskId) {
   padding: 30rpx 0;
   color: #999;
   font-size: 28rpx;
+}
+
+.loading-status {
+  padding-bottom: 60rpx;
 }
 
 .empty-status {
