@@ -125,6 +125,25 @@ function getStatusClass(status) {
   }
 }
 
+// 格式化时间：大于等于2点减2小时，否则显示"前一天"加前一天的时间
+function formatStartTime(timeStr) {
+  if (!timeStr) return "";
+  const [h, m] = timeStr.split(":").map(Number);
+  if (h >= 2) {
+    // 大于等于2点，减2小时
+    const newH = h - 2;
+    return `${newH.toString().padStart(2, "0")}:${m
+      .toString()
+      .padStart(2, "0")}`;
+  } else {
+    // 小于2点，显示"前一天"加前一天的时间
+    const prevH = (h + 22) % 24;
+    return `前一天${prevH.toString().padStart(2, "0")}:${m
+      .toString()
+      .padStart(2, "0")}`;
+  }
+}
+
 // 拨打电话
 function callPhone(phone) {
   if (phone) {
@@ -976,7 +995,7 @@ async function setTaskCompleted(taskId) {
           <!-- 任务时间信息 -->
           <view class="task-time">
             <view class="start-time">
-              <text class="time">{{ task.time.start }}</text>
+              <text class="time">{{ formatStartTime(task.time.start) }}</text>
               <text class="location">{{
                 task.flightInfo?.location || "---"
               }}</text>
@@ -996,9 +1015,7 @@ async function setTaskCompleted(taskId) {
 
             <view class="end-time" v-if="task.time.end">
               <text class="time">{{ task.time.end }}</text>
-              <text class="location">{{
-                task.flightInfo?.location || "---"
-              }}</text>
+              <text class="location">{{ task.destination || "---" }}</text>
               <text class="flight-code">{{
                 task.flightInfo?.code || "---"
               }}</text>
